@@ -1,0 +1,44 @@
+<div class="">
+    
+    <script type="text/ng-template" id="orderModal.html">
+        <div class="modal-header">
+            <h3 class="modal-title">Commande tirages photo</h3>
+        </div>
+        <div class="modal-body">
+            <form name="modal">
+                Nom: <input type="text" ng-model="orderModal.userName" required uppercase />
+                <br/><br/>Prénom: <input type="text" ng-model="orderModal.userFirstName" required />
+                <br/><br/>E-mail: <input type="email" ng-model="orderModal.userMail" required />
+            </form>
+            <br/><br/>
+            {{orderModal.data}}
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-primary" type="button" ng-click="orderModal.orderModalOk()" ng-disabled="orderModal.closeDisabled || modal.$invalid">Commander</button>
+            <button class="btn btn-warning" type="button" ng-click="orderModal.orderModalCancel()" ng-disabled="orderModal.closeDisabled">Annuler</button>
+        </div>
+    </script>
+    
+    <button type="button" class="btn btn-primary" ng-click="main.orderModalOpen()">Commander les {{main.npics()}} photos sélectionnées</button> 
+    &nbsp;&nbsp;<i>Tarifs : Couple (20x30) : 15€, Petit groupe (20x30) : 15€, Groupe (25x36) : 20€</i>
+    <br/><br/>
+    
+    <table class="table-bordered">
+        <tr ng-repeat="pics in main.pics">
+            <td ng-repeat="pic in pics">
+                <center>
+                    <img ng-src="images/Photographe/thumbs/{{pic}}"/>
+                    <br/><br/>{{pic}} &nbsp;&nbsp;<span class="badge">{{main.n(pic)}} ajoutées</span>&nbsp;&nbsp;
+                    <button type="button" class="btn btn-success btn-sm" ng-click="main.add(pic)">+</button> 
+                    <button type="button" class="btn btn-danger btn-sm" ng-click="main.remove(pic)">-</button>
+                    <br/><br/>
+                </center>
+            </td>
+        </tr>
+    </table>
+    
+    <br/>
+    <button type="button" class="btn btn-primary" ng-click="main.orderModalOpen()">Commander les {{main.npics()}} photos sélectionnées</button>
+    
+    <br/><br/>
+</div>

@@ -10,7 +10,7 @@
 
     $error_msg = "Error performing the request.";
 
-    $link = mysql_connect('localhost', 'mse', 'mse') or die($error_msg . " (mysql_connect)"); 
+    $link = mysql_connect('localhost', 'LOGIN', 'PASS') or die($error_msg . " (mysql_connect)"); 
     mysql_select_db('mse') or die($error_msg . " (mysql_select_db)");
 
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {

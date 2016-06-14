@@ -1,6 +1,6 @@
 # Pics order
 
-Small app in order to display pics & make possible for your customer to order the pics of his choice (and for each one, the amount).
+Small app in order to display pics & make possible for your customer to order the pics of his choice (and for each one, the number of copies).
 
 For a small amount of pics only : all the pics are shown on a single page.
 

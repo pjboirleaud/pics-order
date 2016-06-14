@@ -1,8 +1,10 @@
 # Pics order
 
-Small app in order to display pics & make possible for your customer to order the pics of his choice (and for each one, the amount)
-For a small amount of pics only : all the pics are shown on a single page
-Fits weel for example for wedding pics ordering webpages
+Small app in order to display pics & make possible for your customer to order the pics of his choice (and for each one, the amount).
+
+For a small amount of pics only : all the pics are shown on a single page.
+
+Fits well for example for wedding pics ordering webpages.
 
 ## Build & development
 
